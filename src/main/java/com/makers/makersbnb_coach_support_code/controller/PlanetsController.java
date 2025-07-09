@@ -17,7 +17,7 @@ public class PlanetsController {
     public ModelAndView marsInfo() {
         ModelAndView marsView = new ModelAndView("/MarsInfo");
 
-        Planet mars = new Planet("The planet Mars is half the size of the Earth.", 21344);
+        Planet mars = new Planet("The planet Mars is half the size of the Earth.", 21344, "Mars");
         String marsDescription = mars.getDescription();
 
         marsView.addObject("marsDescription", marsDescription);
