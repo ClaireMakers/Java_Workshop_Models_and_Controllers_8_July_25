@@ -5,13 +5,18 @@ import jakarta.persistence.*;
 @Entity
 @Table(name="planets")
 public class Planet {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String description;
     private Integer circumference;
     private String name;
-    private Long id;
+
+    public Planet() {
+
+    }
 
     public Planet (String description, Integer circumference, String name) {
         this.description = description;
@@ -42,4 +47,6 @@ public class Planet {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Long getId() { return this.id; }
 }
